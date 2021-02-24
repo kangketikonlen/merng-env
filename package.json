@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/kangketikonlen/merng-env/issues"
   },
-  "homepage": "https://github.com/kangketikonlen/merng-env#readme"
+  "homepage": "https://github.com/kangketikonlen/merng-env#readme",
+  "dependencies": {
+    "apollo-server": "^2.21.0",
+    "bcryptjs": "^2.4.3",
+    "graphql": "^15.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.18"
+  }
 }
