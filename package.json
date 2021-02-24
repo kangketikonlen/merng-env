@@ -1,0 +1,22 @@
+{
+  "name": "merng-env",
+  "version": "1.0.0",
+  "description": "MERNG Stacks Env",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kangketikonlen/merng-env.git"
+  },
+  "keywords": [
+    "templates"
+  ],
+  "author": "Kangketik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kangketikonlen/merng-env/issues"
+  },
+  "homepage": "https://github.com/kangketikonlen/merng-env#readme"
+}
