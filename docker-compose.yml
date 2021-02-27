@@ -1,0 +1,32 @@
+version: '3.8'
+
+services: 
+  merng-server:
+    image: merng-server:v1.0-prod
+    ports:
+      - 8079:8079
+      - 9229:9229
+    environment: 
+      - SERVER_PORT=8079
+      - CONNECTIONSTRING=mongodb://mongodb:27017/merngdb
+    command: npm run debug
+
+  merng-client:
+    image: merng-client:v1.0-prod
+    ports:
+      - 3000:3000
+    environment: 
+      - PORT=3000
+    command: npm run start
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_merng:/data/db
+      - mongodb_config_merng:/data/configdb
+    
+volumes:
+  mongodb_merng:
+  mongodb_config_merng:
