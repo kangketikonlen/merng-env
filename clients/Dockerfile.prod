@@ -1,0 +1,13 @@
+FROM node:latest
+WORKDIR /app
+ENV PATH /app/node_modules/.bin:$PATH
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm ci --silent
+RUN npm install react-scripts --silent
+RUN npm install build
+RUN npm install serve
+COPY . ./
+RUN npm run build
+EXPOSE 3001
+CMD ["serve","-s","build"]
